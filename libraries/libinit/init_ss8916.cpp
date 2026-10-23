@@ -8,10 +8,12 @@
 
 #include <libinit_mainline_common.h>
 #include <libinit_misc.h>
+#include <libinit_utils.h>
 
 void vendor_process_bootenv() {
     vendor_process_bootenv_mainline_common();
     enable_insecure_debugging();
+    property_override("ro.boot.mode", "");
 }
 
 void vendor_load_properties() {
