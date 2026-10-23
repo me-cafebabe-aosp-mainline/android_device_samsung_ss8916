@@ -40,8 +40,20 @@ PRODUCT_PACKAGES += \
     use_memfd.rc \
     zram.rc
 
+PRODUCT_PACKAGES += \
+    generic_init_first_stage \
+    generic_init_second_stage.recovery
+
+$(call soong_config_set_bool,generic_init,enabled,true)
 $(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_ss8916)
 $(call soong_config_set,mainline_common_libinit,set_properties_from,devicetree)
+
+# Images
+PRODUCT_BUILD_BOOT_IMAGE := true
+#PRODUCT_BUILD_DEBUG_BOOT_IMAGE := true
+PRODUCT_BUILD_RAMDISK_IMAGE := true
+PRODUCT_BUILD_RECOVERY_IMAGE := true
+PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
