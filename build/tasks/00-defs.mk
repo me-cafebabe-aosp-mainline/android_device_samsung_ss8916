@@ -5,9 +5,9 @@
 
 ifeq ($(USES_DEVICE_SAMSUNG_SS8916),true)
 
-# Image sizes in bytes: 13 MiB boot, 300 MiB cache and 4 GiB userdata partitions
+# Image sizes in bytes: 13 MiB boot, 30 MiB cache and 4 GiB userdata partitions
 SS8916_BOOT_IMAGE_MAX_SIZE ?= 13631488
-SS8916_CACHE_IMAGE_SIZE ?= 314572800
+SS8916_CACHE_IMAGE_SIZE ?= 31457280
 SS8916_USERDATA_IMAGE_SIZE ?= 4294967296
 
 # The directory in the userdata image that holds the Android files,

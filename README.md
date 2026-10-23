@@ -5,7 +5,7 @@
 | Partition | Size | Content | Image |
 |-----------|------|---------|-------|
 | `boot` | 13 MiB | lk2nd | `lk2nd.img` |
-| `cache` | 300 MiB | ext2: kernel, ramdisk, DTBs, `extlinux/extlinux.conf` | `ss8916-cache.img` |
+| `cache` | 30 MiB | ext2: kernel, ramdisk, DTBs, `extlinux/extlinux.conf` | `ss8916-cache.img` |
 | `userdata` | > 4 GiB | f2fs: `android/{system,vendor,vendor_dlkm}.img`, `android/metadata/`, `android/userdata/` | `ss8916-userdata.img` |
 
 ## Building and flashing
