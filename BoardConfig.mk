@@ -48,6 +48,9 @@ BOARD_KERNEL_CMDLINE += \
 # Display
 TARGET_SCREEN_DENSITY := 280
 
+# Fastboot
+TARGET_BOARD_FASTBOOT_INFO_FILE := $(DEVICE_PATH)/configs/fastboot/fastboot-info.txt
+
 # Filesystem
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_USERIMAGES_USE_F2FS := true

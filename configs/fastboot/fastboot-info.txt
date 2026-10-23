@@ -1,0 +1,5 @@
+# fastboot-info for ss8916
+version 1
+flash boot lk2nd.img
+flash cache ss8916-cache.img
+flash userdata ss8916-userdata.img
