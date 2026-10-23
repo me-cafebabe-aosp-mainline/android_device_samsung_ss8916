@@ -120,9 +120,6 @@ $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
-# Ramdisk
-BOARD_RAMDISK_USE_LZ4 := true
-
 # Recovery
 TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/configs/fstab/fstab.ss8916
