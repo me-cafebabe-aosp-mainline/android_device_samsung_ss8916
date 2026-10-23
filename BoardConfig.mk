@@ -80,8 +80,10 @@ TARGET_KERNEL_CONFIG_EXT := \
 # Kernel modules
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
     $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.basic)) \
+    $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.input)) \
     $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.drm)) \
-    $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.touchscreen))
+    $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.leds)) \
+    $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.power))
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 RECOVERY_KERNEL_MODULES := \

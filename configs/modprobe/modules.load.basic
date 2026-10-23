@@ -1,1 +1,4 @@
-qcom-rng.ko
+sm5703.ko
+sm5703-regulator.ko
+rt5033.ko
+rt5033-regulator.ko

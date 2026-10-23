@@ -1,0 +1,5 @@
+sm5703_charger.ko
+sm5703_fuel_gauge.ko
+rt5033_charger.ko
+rt5033_battery.ko
+max17042_battery.ko

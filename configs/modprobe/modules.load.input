@@ -1,0 +1,10 @@
+imagis.ko
+atmel_mxt_ts.ko
+cyttsp5.ko
+mms114.ko
+stmfts.ko
+zinitix.ko
+tm2-touchkey.ko
+regulator-haptic.ko
+gpio-vibra.ko
+pwm-vibra.ko
