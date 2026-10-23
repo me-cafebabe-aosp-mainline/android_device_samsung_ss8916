@@ -16,5 +16,10 @@ cd $OUT && fastboot flashall
 ```
 
 `ss8916-cacheimage` and `ss8916-userdataimage` build the single images.
+`ss8916-images-nodeps` (or `ss8916-cacheimage-nodeps` and
+`ss8916-userdataimage-nodeps`) repacks the images from what is already
+built, without checking dependencies. It is useful after temporary edits
+to the files in `$OUT`.
+
 The userdata image is 4 GiB; change it with `SS8916_USERDATA_IMAGE_SIZE`
 (bytes) if the partition is smaller.

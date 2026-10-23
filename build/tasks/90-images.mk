@@ -27,4 +27,8 @@ ss8916-check-lk2nd-size: $(INSTALLED_LK2NDIMAGE_TARGET)
 ss8916-images: $(SS8916_FLASH_IMAGES) ss8916-check-lk2nd-size
 	@echo "Flash with: ANDROID_PRODUCT_OUT=$(PRODUCT_OUT) fastboot flashall"
 
+# Repack the cache and userdata images from what is already built
+.PHONY: ss8916-images-nodeps
+ss8916-images-nodeps: ss8916-cacheimage-nodeps ss8916-userdataimage-nodeps
+
 endif # USES_DEVICE_SAMSUNG_SS8916
