@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-USES_DEVICE_QUALCOMM_QRD8937 := true
+USES_DEVICE_SAMSUNG_SS8916 := true
 
 # Inherit from mainline/qcom-common
 include device/mainline/qcom-common/BoardConfigMainlineQcomCommon.mk
@@ -25,7 +25,7 @@ BOARD_KERNEL_CMDLINE := \
     $(MAINLINE_QCOM_KERNEL_PARAMS) \
     $(MAINLINE_QCOM_SOC_ANDROIDBOOT_PARAMS) \
     $(MAINLINE_QCOM_SOC_KERNEL_PARAMS) \
-    androidboot.hardware=qrd8937 \
+    androidboot.hardware=ss8916 \
     androidboot.verifiedbootstate=orange \
     clk_ignore_unused \
     console=tty0 \
@@ -37,7 +37,7 @@ BOARD_KERNEL_CMDLINE += \
     audit=0
 
 # Display
-TARGET_SCREEN_DENSITY := 400
+TARGET_SCREEN_DENSITY := 280
 
 # Filesystem
 TARGET_USERIMAGES_USE_F2FS := true
@@ -45,14 +45,16 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-TARGET_KERNEL_SOURCE := kernel/mainline/msm89x7-mainline
+TARGET_KERNEL_SOURCE := kernel/mainline/msm8916-mainline
 
 TARGET_DTB_LIST_WILDCARD := \
-    qcom/msm8937-qcom-qrd-sku1
+    qcom/msm8916-samsung-* \
+    qcom/msm8929-samsung-* \
+    qcom/msm8939-samsung-*
+
+TARGET_KERNEL_CONFIG := msm8916_defconfig
 
 TARGET_KERNEL_CONFIG_EXT := \
-    $(DEVICE_PATH)/configs/kernel/config-postmarketos-qcom-msm89x7.aarch64 \
-    $(DEVICE_PATH)/configs/kernel/fixup.config \
     kernel/mainline/configs/fragments/android-base-pre/common.config \
     kernel/mainline/configs/fragments/android-base-pre/arm64.config \
     kernel/configs/b/android-6.12/android-base.config \
@@ -74,7 +76,7 @@ RECOVERY_KERNEL_MODULES := \
 TARGET_AUTO_COLLECT_KERNEL_MODULE_DEPS := true
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := qrd8937
+TARGET_OTA_ASSERT_DEVICE := ss8916
 
 # Partitions
 SSI_PARTITIONS := system
@@ -101,7 +103,7 @@ BOARD_SUPER_PARTITION_SIZE := $(BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE)
 
 BOARD_QRD8937_DYNPART_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 4194304 )
 BOARD_QRD8937_DYNPART_PARTITION_LIST := $(ALL_PARTITIONS)
-BOARD_SUPER_PARTITION_GROUPS := qrd8937_dynpart
+BOARD_SUPER_PARTITION_GROUPS := ss8916_dynpart
 
 # Partitions - reserved size
 $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
@@ -122,5 +124,5 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Recovery
-TARGET_RECOVERY_DENSITY := xxhdpi
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/configs/fstab/fstab.qrd8937
+TARGET_RECOVERY_DENSITY := xhdpi
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/configs/fstab/fstab.ss8916

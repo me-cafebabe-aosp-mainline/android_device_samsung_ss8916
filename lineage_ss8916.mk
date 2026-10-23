@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from device
-$(call inherit-product, device/qualcomm/qrd8937/device.mk)
+$(call inherit-product, device/samsung/ss8916/device.mk)
 
-PRODUCT_NAME := lineage_qrd8937
-PRODUCT_DEVICE := qrd8937
-PRODUCT_BRAND := Qualcomm
-PRODUCT_MANUFACTURER := Qualcomm
-PRODUCT_MODEL := MSM8937 QRD
+PRODUCT_NAME := lineage_ss8916
+PRODUCT_DEVICE := ss8916
+PRODUCT_BRAND := Samsung
+PRODUCT_MANUFACTURER := Samsung
+PRODUCT_MODEL := MSM8916

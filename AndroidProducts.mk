@@ -4,7 +4,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_qrd8937.mk
+    $(LOCAL_DIR)/lineage_ss8916.mk
 
 $(foreach build_type, user userdebug eng, \
-    $(eval COMMON_LUNCH_CHOICES += lineage_qrd8937-$(build_type)))
+    $(eval COMMON_LUNCH_CHOICES += lineage_ss8916-$(build_type)))

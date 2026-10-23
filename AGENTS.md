@@ -1,11 +1,11 @@
-# AGENTS.md - device/qualcomm/qrd8937
+# AGENTS.md - device/qualcomm/ss8916
 
 Agents must read this file before touching anything in this repository.
 
 Part of the mainline repository set. Map of all repos: `vendor/mainline/docs/REPOSITORIES.md`.
 
-Device tree for the Qualcomm MSM8937 QRD (SKU1, PMI8950) running a
-mainline kernel, booted through lk2nd.
+Device tree for Samsung MSM8916 devices running a mainline kernel,
+booted through lk2nd.
 
 ## Read first
 
@@ -23,7 +23,4 @@ mainline kernel, booted through lk2nd.
 - Do not search from the AOSP tree root; use precise directories.
 - Keep device specific values here. Things that apply to more devices
   belong in the common trees (ask first).
-- The partition scheme comes from the downstream `msm8937` device tree
-  of this board. Never take it from another device. Only mount options
-  of fstab entries may be borrowed.
 - Do not add firmware or proprietary files.

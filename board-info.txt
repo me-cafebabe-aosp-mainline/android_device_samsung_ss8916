@@ -1,1 +1,1 @@
-require board=qrd8937
+require board=ss8916

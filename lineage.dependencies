@@ -4,10 +4,6 @@
     "target_path": "device/mainline/qcom-common"
   },
   {
-    "repository": "android_device_xiaomi_mi89xx-mainline",
-    "target_path": "device/xiaomi/mi89xx-mainline"
-  },
-  {
     "repository": "android_external_lk2nd",
     "target_path": "external/lk2nd"
   },

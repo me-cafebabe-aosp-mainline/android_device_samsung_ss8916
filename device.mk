@@ -3,24 +3,24 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/qualcomm/qrd8937
+DEVICE_PATH := device/samsung/ss8916
 
 # Inherit from mainline/qcom-common
 $(call inherit-product, device/mainline/qcom-common/mainline_qcom-common.mk)
 
 # AAPT
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Audio
-TARGET_AUDIO_MAINLINE_UCM_PROFILES := msm8937-qrd
+#TARGET_AUDIO_MAINLINE_UCM_PROFILES :=
 
 # Bootanimation
 TARGET_BOOTANIMATION_HALF_RES := true
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
 # Dalvik heap
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Disable
 TARGET_SUPPORTS_SUSPEND ?= false
@@ -31,16 +31,16 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.qrd8937 \
-    fstab.qrd8937.ramdisk \
-    init.qrd8937.rc \
-    ueventd.qrd8937.rc
+    fstab.ss8916 \
+    fstab.ss8916.ramdisk \
+    init.ss8916.rc \
+    ueventd.ss8916.rc
 
 PRODUCT_PACKAGES += \
     use_memfd.rc \
     zram.rc
 
-$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_qrd8937)
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_ss8916)
 $(call soong_config_set,mainline_common_libinit,set_properties_from,devicetree)
 
 # Kernel
@@ -64,7 +64,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 TARGET_FOLLOWS_LATEST_SHIPPING_API_LEVEL := true
 
 # SoC
-TARGET_QCOM_SOC_FAMILY := msm8937
+TARGET_QCOM_SOC_FAMILY := msm8916
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

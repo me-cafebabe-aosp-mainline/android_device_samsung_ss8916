@@ -4,14 +4,14 @@
 //
 
 prebuilt_etc {
-    name: "init.qrd8937.rc",
-    src: "init.qrd8937.rc",
+    name: "init.ss8916.rc",
+    src: "init.ss8916.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "ueventd.qrd8937.rc",
-    src: "ueventd.qrd8937.rc",
+    name: "ueventd.ss8916.rc",
+    src: "ueventd.ss8916.rc",
     vendor: true,
 }

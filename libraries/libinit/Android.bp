@@ -5,7 +5,7 @@
 //
 
 cc_library_static {
-    name: "init_qrd8937",
-    srcs: ["init_qrd8937.cpp"],
+    name: "init_ss8916",
+    srcs: ["init_ss8916.cpp"],
     defaults: ["init_mainline_common_defaults"],
 }

@@ -4,8 +4,8 @@
 //
 
 prebuilt_etc {
-    name: "fstab.qrd8937",
-    src: "fstab.qrd8937",
+    name: "fstab.ss8916",
+    src: "fstab.ss8916",
     vendor: true,
     ramdisk_available: true,
 }
