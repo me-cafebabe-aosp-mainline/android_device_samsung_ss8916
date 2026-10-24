@@ -12,7 +12,10 @@ $(call inherit-product, device/mainline/qcom-common/mainline_qcom-common.mk)
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Audio
-#TARGET_AUDIO_MAINLINE_UCM_PROFILES :=
+TARGET_AUDIO_MAINLINE_UCM_PROFILES := \
+    samsung-j3xpro \
+    samsung-j5chn \
+    samsung-j7chn
 
 # Bootanimation
 TARGET_BOOTANIMATION_HALF_RES := true
