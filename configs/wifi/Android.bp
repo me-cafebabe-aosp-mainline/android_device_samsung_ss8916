@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_firmware {
+    name: "WCNSS_qcom_wlan_nv.bin",
+    src: "WCNSS_qcom_wlan_nv.bin",
+    relative_install_path: "wlan/prima",
+    device_specific: true,
+}
