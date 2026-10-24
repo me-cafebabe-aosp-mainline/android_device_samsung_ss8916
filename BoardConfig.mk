@@ -78,14 +78,18 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/n/faster-build-time.config
 
 # Kernel modules
-BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
     $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.basic)) \
-    $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.input)) \
     $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.drm)) \
-    $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.leds)) \
     $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.power))
+BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
+    $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD) \
+    $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.input)) \
+    $(strip $(shell cat $(DEVICE_PATH)/configs/modprobe/modules.load.leds))
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
+BOOT_KERNEL_MODULES := \
+    $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 RECOVERY_KERNEL_MODULES := \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 TARGET_AUTO_COLLECT_KERNEL_MODULE_DEPS := true
