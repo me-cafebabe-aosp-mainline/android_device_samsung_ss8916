@@ -61,6 +61,9 @@ PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/modprobe/modules.blocklist:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/modules.blocklist
+
 PRODUCT_PACKAGES += \
     modules.load.normal
 
