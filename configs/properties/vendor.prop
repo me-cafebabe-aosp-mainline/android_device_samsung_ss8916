@@ -1,6 +1,3 @@
-# Remoteproc
-vendor.remoteproc.4080000_remoteproc.ignore=1
-
 # Sensors
 vendor.sensors.backends=iio,mock
 
