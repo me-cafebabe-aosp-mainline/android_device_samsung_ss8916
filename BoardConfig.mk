@@ -68,6 +68,7 @@ TARGET_DTB_LIST_WILDCARD := \
 TARGET_KERNEL_CONFIG := msm8916_defconfig
 
 TARGET_KERNEL_CONFIG_EXT := \
+    $(DEVICE_PATH)/configs/kernel/fixup.config \
     kernel/mainline/configs/fragments/android-base-pre/common.config \
     kernel/mainline/configs/fragments/android-base-pre/arm64.config \
     kernel/configs/b/android-6.12/android-base.config \
