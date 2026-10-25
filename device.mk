@@ -23,7 +23,7 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
 # Dalvik heap
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 # Disable
 TARGET_SUPPORTS_SUSPEND ?= false
@@ -31,6 +31,9 @@ TARGET_SUPPORTS_SUSPEND ?= false
 # Dynamic partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Go
+PRODUCT_GO_DEFAULTS_SUFFIX := _512
 
 # Init
 PRODUCT_PACKAGES += \
