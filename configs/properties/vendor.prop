@@ -1,5 +1,2 @@
 # Sensors
 vendor.sensors.backends=iio,mock
-
-# ZRAM
-persist.sys.zram_enabled=1
