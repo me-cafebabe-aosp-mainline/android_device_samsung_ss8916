@@ -68,6 +68,9 @@ PRODUCT_PACKAGES += \
     modules.load.normal
 
 # Miscellaneous
+PRODUCT_PACKAGES += \
+    odm_firmware_symlink
+
 TARGET_ENABLE_EARLY_ADBD := true
 
 # Overlays

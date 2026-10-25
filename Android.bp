@@ -8,3 +8,10 @@ soong_namespace {
         "device/mainline/common",
     ],
 }
+
+install_symlink {
+    name: "odm_firmware_symlink",
+    device_specific: true,
+    installed_location: "firmware",
+    symlink_target: "/odm/etc/firmware",
+}
