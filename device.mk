@@ -75,8 +75,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     odm_firmware_symlink
 
-TARGET_ENABLE_EARLY_ADBD := true
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlays/overlay
