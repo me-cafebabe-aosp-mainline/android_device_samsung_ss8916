@@ -6,9 +6,6 @@
 # Boot
 /dev/null /boot emmc defaults defaults
 
-# DSP
-/dev/block/by-name/dsp /vendor/dsp ext4 ro,nosuid,nodev defaults
-
 # Firmware
 /dev/block/by-name/apnhlos /vendor/firmware_mnt vfat ro,context=u:object_r:firmware_mnt_file:s0,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337 defaults
 /dev/block/by-name/modem /vendor/firmware-modem vfat ro,context=u:object_r:firmware_mnt_file:s0,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337 defaults
