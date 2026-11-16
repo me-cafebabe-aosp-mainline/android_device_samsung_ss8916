@@ -13,6 +13,7 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Audio
 TARGET_AUDIO_MAINLINE_UCM_PROFILES := \
+    samsung-a2015 \
     samsung-j3xpro \
     samsung-j5chn \
     samsung-j7chn
