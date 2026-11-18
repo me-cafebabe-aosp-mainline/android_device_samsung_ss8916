@@ -106,5 +106,11 @@ PRODUCT_SOONG_NAMESPACES += \
 TARGET_FOLLOWS_LATEST_VINTF_TARGET_LEVEL := true
 
 # Wi-Fi
+# cfg80211 is built in and looks for regulatory.db at ~2s, before /vendor is
+# mounted; without it the kernel retries CRDA for ~30s and keeps ueventd busy.
+PRODUCT_COPY_FILES += \
+    external/linux-firmware-mainline/wireless-regdb/regulatory.db:$(TARGET_COPY_OUT_RAMDISK)/lib/firmware/regulatory.db \
+    external/linux-firmware-mainline/wireless-regdb/regulatory.db.p7s:$(TARGET_COPY_OUT_RAMDISK)/lib/firmware/regulatory.db.p7s
+
 PRODUCT_PACKAGES += \
     WCNSS_qcom_wlan_nv.bin
