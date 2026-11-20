@@ -84,6 +84,11 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlays/overlay
 
+ifneq ($(LINEAGE_BUILD),)
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlays/overlay-lineage
+endif
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
