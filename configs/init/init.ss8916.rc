@@ -10,6 +10,10 @@ on post-fs
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -s -d /vendor/lib/modules --all=/vendor/etc/modules.load.normal
     trigger start_all_remoteproc
 
+# Firmware
+on start_all_remoteproc
+    write /sys/class/firmware/timeout 15
+
 # Mount
 on fs
     # Mount everything that does not require fsck
