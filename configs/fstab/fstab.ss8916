@@ -26,4 +26,4 @@
 /devices/platform/soc@0/78db000.usb/*/usb* auto auto defaults voldmanaged=usb:auto,noemulatedsd
 
 # ZRAM
-/dev/block/zram0 none swap defaults zramsize=50%
+/dev/block/zram0 none swap defaults zramsize=150%

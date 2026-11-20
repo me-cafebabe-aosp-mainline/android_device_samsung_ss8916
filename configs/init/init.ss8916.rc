@@ -18,3 +18,7 @@ on fs
 on late-fs
     # Mount RW partitions which need run fsck
     mount_all --late
+
+# ZRAM
+on boot
+    write /proc/sys/vm/swappiness 100
